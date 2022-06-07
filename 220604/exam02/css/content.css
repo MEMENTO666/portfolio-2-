@@ -1,0 +1,215 @@
+#text1 {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+  letter-spacing: 8px;
+  font-size: 7vw;
+  font-weight: bold;
+  padding-left: 10vw;
+  font-family: 'Black Han Sans', sans-serif;
+}
+
+#text2 {
+  width: 100vw;
+  height: 100vh;
+  /* border: 1px solid white; */
+  color: white;
+  display: flex;
+  padding: 40px;
+  align-items: center;
+  flex-direction: column;
+}
+
+#text2Box1 {
+  width: 80vw;
+  height: 40vh;
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+#text2Box1>div {
+  width: 40vw;
+  height: 40vh;
+}
+
+#text2Box2 {
+  width: 80vw;
+  height: 60vh;
+  /* border: 1px solid blue; */
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#text2Box2>div {
+  width: 40vw;
+  display: flex;
+  align-items: center;
+  height: 50vh;
+}
+
+
+#profile {
+  font-size: 18px;
+  width: 40vw;
+  height: 40vh;
+  /* font-family: 'Dongle', sans-serif; */
+  letter-spacing: 2px;
+
+}
+
+#profileImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40vw;
+}
+
+#profileImg div {
+  /* background-image: url(./메인3.jpg); */
+  background-size: cover;
+  width: 320px;
+  height: 320px;
+}
+
+#frog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#frog div {
+  width: 350px;
+  height: 350px;
+  /* border: 1px solid white; */
+  /* background-image: url(./개구리.png); */
+  background-size: cover;
+}
+
+#text3 {
+  width: 100vw;
+  height: 100vh;
+  /* border: 1px solid white; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#text3Box {
+  width: 80vw;
+  height: 80vh;
+  /* border: 1px solid white; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#text3Box>div {
+  width: 300px;
+  height: 300px;
+  /* border: 1px solid white; */
+}
+
+#photo1 {
+  /* background-image: url(./메인.jpg); */
+  background-size: cover;
+}
+
+#photo2 {
+  /* background-image: url(./메인4.jpg); */
+  background-size: cover;
+}
+
+#photo3 {
+  /* background-image: url(./메인6.jpg); */
+  background-size: cover;
+}
+
+#photo4 {
+  /* background-image: url(./메인2.jpg); */
+  background-size: cover;
+}
+
+#text4Box {
+  width: 100vw;
+  height: 100vh;
+  /* border: 1px solid white; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#text4Box div:nth-child(1) {
+  width: 100vw;
+  height: 80vh;
+  /* border: 1px solid white; */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#text4Box div:nth-child(1) div {
+  width: 400px;
+  height: 600px;
+  background-color: #F13582;
+}
+
+#text4BoxText {
+  width: 50vw;
+  height: 5vh;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 4vw;
+  /* border: 1px solid white; */
+  font-family: 'East Sea Dokdo', cursive;
+}
+
+#wed1 {
+  /* background-image: url(./웨딩.jpg); */
+  background-size: cover;
+  background-position: center;
+}
+
+#wed2 {
+  /* background-image: url(./웨딩2.jpg); */
+  background-size: cover;
+}
+
+#sideBtn {
+  width: 40px;
+  height: 200px;
+  position: fixed;
+  top: 130px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#sideBtn div {
+  width: 35px;
+  height: 15px;
+  background-color: rgba(255, 255, 255, 0.61);
+  /* border-radius: 50%; */
+  transform: rotate(-55deg);
+  cursor: pointer;
+  opacity: 0.8;
+  border-radius: 20px;
+}
+
+#sideBtn >div:hover {
+  background-color: #F13582;
+  transform: rotate(999845deg);
+  transition: 55s;
+}

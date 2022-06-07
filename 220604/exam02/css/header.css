@@ -1,0 +1,13 @@
+#header {
+  width: 100vw;
+  height: 9vh;
+  border: 1px solid #002530;
+  backdrop-filter: blur(15px);
+  opacity: 10;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  padding-right: 40px;
+  font-weight: bold;
+}

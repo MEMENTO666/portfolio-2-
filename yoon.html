@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2022.05.27</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    #root {
+      width: 100vw;
+      height: 600vh;
+      background-color: #002530;
+      display: flex;
+      /* justify-content: center; */
+      flex-direction: column;
+    }
+
+    #header {
+      width: 100vw;
+      height: 9vh;
+      border: 1px solid #002530;
+      backdrop-filter: blur(15px);
+      opacity: 10;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      position: fixed;
+      padding-right: 40px;
+      font-weight: bold;
+    }
+
+    #menu-ul {
+      list-style: none;
+      color: white;
+      display: flex;
+    }
+
+    #menu-ul>li {
+      cursor: pointer;
+    }
+
+    #menu-ul>li:hover {
+      color: #F13582;
+      transition: 0.9s;
+      font-size: 20px;
+    }
+
+    /* 자바스크립트 구현 영역 */
+
+    li {
+      margin: 35px;
+    }
+
+    #text1 {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      color: white;
+      letter-spacing: 8px;
+      font-size: 7vw;
+      font-weight: bold;
+      padding-left: 10vw;
+      font-family: 'Black Han Sans', sans-serif;
+    }
+
+    #sideBtn {
+      width: 40px;
+      height: 200px;
+      position: fixed;
+      top: 130px;
+      right: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+
+    #sideBtn div {
+      width: 35px;
+      height: 15px;
+      background-color: rgba(255, 255, 255, 0.61);
+      /* border-radius: 50%; */
+      transform: rotate(-55deg);
+      cursor: pointer;
+      opacity: 0.8;
+      border-radius: 20px;
+    }
+
+    #sideBtn>div:hover {
+      background-color: #F13582;
+      transform: rotate(999845deg);
+      transition: 55s;
+    }
+
+    /*자바스크립트로 구현할 영역임, mouseover 사용,  */
+
+    #text2 {
+      width: 100vw;
+      height: 100vh;
+      /* border: 1px solid white; */
+      color: white;
+      display: flex;
+      padding: 40px;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    #text2Box1 {
+      width: 80vw;
+      height: 40vh;
+      /* border: 1px solid red; */
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+    }
+
+    #text2Box1>div {
+      width: 40vw;
+      height: 40vh;
+    }
+
+    #text2Box2 {
+      width: 80vw;
+      height: 60vh;
+      /* border: 1px solid blue; */
+      line-height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    #text2Box2>div {
+      width: 40vw;
+      display: flex;
+      align-items: center;
+      height: 50vh;
+    }
+
+
+    #profile {
+      font-size: 18px;
+      width: 40vw;
+      height: 40vh;
+      /* font-family: 'Dongle', sans-serif; */
+      letter-spacing: 2px;
+
+    }
+
+    #profileImg {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40vw;
+    }
+
+    #profileImg div {
+      background-image: url(./메인3.jpg);
+      background-size: cover;
+      width: 320px;
+      height: 320px;
+    }
+
+    #frog {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #frog div {
+      width: 350px;
+      height: 350px;
+      /* border: 1px solid white; */
+      background-image: url(./개구리.png);
+      background-size: cover;
+    }
+
+    #text3 {
+      width: 100vw;
+      height: 100vh;
+      /* border: 1px solid white; */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #text3Box {
+      width: 80vw;
+      height: 80vh;
+      /* border: 1px solid white; */
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    #text3Box>div {
+      width: 300px;
+      height: 300px;
+      /* border: 1px solid white; */
+    }
+
+    #photo1 {
+      background-image: url(./메인.jpg);
+      background-size: cover;
+    }
+
+    #photo2 {
+      background-image: url(./메인4.jpg);
+      background-size: cover;
+    }
+
+    #photo3 {
+      background-image: url(./메인6.jpg);
+      background-size: cover;
+    }
+
+    #photo4 {
+      background-image: url(./메인2.jpg);
+      background-size: cover;
+    }
+              /* ****************************이미지 4개******************************** */
+            /***********************자식요소로 만들어서 한번에 효과주기*********** */
+    #text4Box {
+      width: 100vw;
+      height: 100vh;
+      /* border: 1px solid white; */
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    #text4Box div:nth-child(1) {
+      width: 100vw;
+      height: 80vh;
+      /* border: 1px solid white; */
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+
+    #text4Box div:nth-child(1) div {
+      width: 400px;
+      height: 600px;
+      background-color: #F13582;
+    }
+
+
+    #text4BoxText {
+      width: 50vw;
+      height: 5vh;
+      margin-top: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 4vw;
+      /* border: 1px solid white; */
+      font-family: 'East Sea Dokdo', cursive;
+    }
+
+    #wed1 {
+      background-image: url(./웨딩.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+
+    #wed2 {
+      background-image: url(./웨딩2.jpg);
+      background-size: cover;
+    }
+    /* ***********************좌, 우측에서 이미지 나오는 효과*************************** */
+  </style>
+</head>
+
+<body>
+  <div id="root">
+    <div id="header">
+      <ul id="menu-ul">
+        <li id="home">HOME</li>
+        <li id="about">ABOUT</li>
+        <li id="photo">PHOTO</li>
+        <li id="wedding">WEDDING</li>
+      </ul>
+    </div>
+    <div id="text1">
+      <p id="intro">WELCOME TO <span style="color:#F13582;font-family:sans-serif;">빵울</span> PLACE</p>
+    </div>
+    <div id="sideBtn">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div id="text2">
+      <div id="text2Box1">
+        <div>
+          <ul id="profile">
+            <li><span style="font-size: 25px;">이 름 :</span> 채 빵 울</li>
+            <li><span style="font-size: 25px;">나 이 :</span> 미상</li>
+            <li><span style="font-size: 25px;">별 명 :</span> 개구리</li>
+            <li><span style="font-size: 25px;">취 미 :</span> 수면</li>
+            <li><span style="font-size: 25px;">특 기 :</span> 음식섭취</li>
+          </ul>
+        </div>
+        <div id="profileImg">
+          <div id="HS"></div>
+        </div>
+      </div>
+      <div id="text2Box2">
+        <div>
+          적당한 애교와 적당한 난폭함을 겸비함.<br>
+          매사 똑부러지는 성격으로 주위의 평판이 좋음.<br>
+          집에 있으면 심심해 하지만 집밖으로 나가는걸 싫어하는<br>
+          전형적인 집순이.<br>
+          음식 솜씨가 꽤 훌륭한 편이며 손이 굉장히 크다.<br>
+          음식과 음주를 진심으로 사랑하며 우선순위에서도 남편이 밀려남.<br>
+          겁이 굉장히 많으며 '채복치'라는 타이틀과 걸맞는 행동거지를 보임.
+        </div>
+        <div id="frog">
+          <div id="frogImg"></div>
+        </div>
+      </div>
+    </div>
+    <div id="text3">
+      <div id="text3Box">
+        <div id="photo1"></div>
+        <div id="photo2"></div>
+        <div id="photo3"></div>
+        <div id="photo4"></div>
+      </div>
+    </div>
+    <div id="text4Box">
+      <div>
+        <div id="wed1"></div>
+        <div id="wed2"></div>
+      </div>
+      <div id="text4BoxText">
+        <p>2018.11.10♥</p>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    const home = document.getElementById("home");
+    const about = document.getElementById("about");
+    const photo = document.getElementById("photo");
+    const sideBtn = document.getElementById("sideBtn");
+    const intro = document.getElementById("intro");
+    const HS = document.getElementById("HS");
+    const frogImg = document.getElementById("frogImg");
+    const wed1 = document.getElementById("wed1");
+    const wed2 = document.getElementById("wed2");
+    const wedding = document.getElementById("wedding");
+
+    home.addEventListener("click", function () {
+      scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    })
+
+    about.addEventListener("click", function () {
+      scrollTo({
+        top: "900",
+        behavior: "smooth"
+      });
+    })
+
+    photo.addEventListener("click", function () {
+      scrollTo({
+        top: "1800",
+        behavior: "smooth"
+      });
+    })
+    wedding.addEventListener("click", function () {
+      scrollTo({
+        top: "2800",
+        behavior: "smooth"
+      });
+    })
+    intro.addEventListener("mouseover", function (event) {
+      console.log(intro);
+      intro.style.fontSize = "7.4vw";
+      intro.style.transition = "1s";
+
+      intro.addEventListener("mouseout", function (event) {
+        intro.style.fontSize = "7vw";
+        intro.style.transition = "0.8s";
+      });
+    });
+
+    HS.addEventListener("mouseover", function (event) {
+      HS.style.width = "350px";
+      HS.style.height = "350px";
+      HS.style.transition = "0.7s";
+
+      HS.addEventListener("mouseout", function (event) {
+        HS.style.width = "320px";
+        HS.style.height = "320px";
+        HS.style.transition = "0.5s";
+      });
+    });
+
+    frogImg.addEventListener("mouseover", function (event) {
+      frogImg.style.width = "380px";
+      frogImg.style.height = "380px";
+      frogImg.style.transition = "0.7s";
+
+      frogImg.addEventListener("mouseout", function (event) {
+        frogImg.style.width = "350px";
+        frogImg.style.height = "350px";
+        frogImg.style.transition = "0.5s";
+      });
+    });
+    wed1.addEventListener("mouseover", function (event) {
+      wed1.style.width = "450px";
+      wed1.style.height = "650px";
+      wed1.style.transition = "0.7s";
+
+      wed1.addEventListener("mouseout", function (event) {
+        wed1.style.width = "400px";
+        wed1.style.height = "600px";
+        wed1.style.transition = "0.5s";
+      });
+    });
+
+    wed2.addEventListener("mouseover", function (event) {
+      wed2.style.width = "450px";
+      wed2.style.height = "650px";
+      wed2.style.transition = "0.7s";
+
+      wed2.addEventListener("mouseout", function (event) {
+        wed2.style.width = "400px";
+        wed2.style.height = "600px";
+        wed2.style.transition = "0.5s";
+      });
+    });
+  </script>
+
+</body>
+
+</html>
