@@ -1,16 +1,15 @@
-
-
 export const registerEventHandlers = () => {
   const home = document.getElementById("home");
   const about = document.getElementById("about");
   const photo = document.getElementById("photo");
-  //const sideBtn = document.getElementById("sideBtn");
+  const sideBtn = document.getElementById("sideBtn");
   const intro = document.getElementById("intro");
   const HS = document.getElementById("HS");
   const frogImg = document.getElementById("frogImg");
   const wed1 = document.getElementById("wed1");
   const wed2 = document.getElementById("wed2");
   const wedding = document.getElementById("wedding");
+  const menuList = document.getElementById("menu-ul");
 
   home.addEventListener("click", function () {
     scrollTo({
@@ -98,5 +97,6 @@ export const registerEventHandlers = () => {
       wed2.style.transition = "0.5s";
     });
   });
-}
 
+
+}

@@ -63,7 +63,7 @@ export const createContent = () => {
 }
 
 const getUrlImagePath = (filename) => {
-  const imageTopPath = '../assets';
+  const imageTopPath = './assets';
   return `url(${imageTopPath}/${filename})`;
 }
 
@@ -88,8 +88,8 @@ export const loadImages = () => {
     document.getElementById(key).style.backgroundImage = getUrlImagePath(imgList[key]);
   });
   
-  // document.getElementById('photo1').style.backgroundImage = getUrlImagePath('메인.jpg');
-  // document.getElementById('photo2').style.backgroundImage = getUrlImagePath('메인4.jpg');
-  // document.getElementById('photo3').style.backgroundImage = getUrlImagePath('메인6.jpg');
-  // document.getElementById('photo4').style.backgroundImage = getUrlImagePath('메인2.jpg');
+  //  document.getElementById('photo1').style.backgroundImage = getUrlImagePath('메인.jpg');
+  //  document.getElementById('photo2').style.backgroundImage = getUrlImagePath('메인4.jpg');
+  //  document.getElementById('photo3').style.backgroundImage = getUrlImagePath('메인6.jpg');
+  //  document.getElementById('photo4').style.backgroundImage = getUrlImagePath('메인2.jpg');
 }
