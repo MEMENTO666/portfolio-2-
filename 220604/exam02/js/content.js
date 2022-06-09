@@ -5,12 +5,14 @@ export const createContent = () => {
     <div id="text1">
       <p id="intro">WELCOME TO <span style="color:#F13582;font-family:sans-serif;">빵울</span> PLACE</p>
     </div>
+
     <div id="sideBtn">
       <div></div>
       <div></div>
       <div></div>
       <div></div>
     </div>
+
     <div id="text2">
       <div id="text2Box1">
         <div>
@@ -41,6 +43,7 @@ export const createContent = () => {
         </div>
       </div>
     </div>
+
     <div id="text3">
       <div id="text3Box">
         <div id="photo1"></div>
@@ -49,6 +52,7 @@ export const createContent = () => {
         <div id="photo4"></div>
       </div>
     </div>
+
     <div id="text4Box">
       <div>
         <div id="wed1"></div>
@@ -58,9 +62,9 @@ export const createContent = () => {
         <p>2018.11.10♥</p>
       </div>
     </div>
+
     <div id="text5"></div>
     <div id="footer"></div>
-
     </div>
   `;
 }

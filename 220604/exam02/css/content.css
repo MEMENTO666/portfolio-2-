@@ -30,7 +30,6 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-
 }
 
 #text2Box1>div {
@@ -62,7 +61,6 @@
   height: 40vh;
   /* font-family: 'Dongle', sans-serif; */
   letter-spacing: 2px;
-
 }
 
 #profileImg {

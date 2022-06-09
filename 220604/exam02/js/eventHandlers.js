@@ -1,5 +1,5 @@
-export const registerEventHandlers = () => {
-  
+
+export const registerEventHandlers = () => {  
   const home = document.getElementById("home");
   const about = document.getElementById("about");
   const photo = document.getElementById("photo");
@@ -12,37 +12,66 @@ export const registerEventHandlers = () => {
   const wedding = document.getElementById("wedding");
   const undefined = document.getElementById("undefined");
   const text3Box = document.getElementById("text3Box");
+  const photo1 = document.getElementById('photo1');
+  const photo2 = document.getElementById('photo2');
 
   home.addEventListener("click", function () {
-    scrollTo({
+    window.scrollTo({
+      left: 0,
       top: 0,
       behavior: "smooth"
     });
   });
 
   about.addEventListener("click", function () {
-    scrollTo({
-      top: "900",
-      behavior: "smooth"
+    const text2 = document.getElementById('text2');
+    //text2.focus();
+    text2.scrollIntoView({
+      behavior: 'smooth'
     });
+    const photo1 = document.getElementById('photo1');
   });
 
   photo.addEventListener("click", function () {
-    scrollTo({
-      top: "1800",
-      behavior: "smooth"
+    const text3 = document.getElementById('text3');
+    text3.scrollIntoView({
+      behavior: 'smooth'
     });
+    console.log(photo1.getBoundingClientRect());
+    setTimeout(() => {
+      photo1.style.width = "400px";
+      photo1.style.height = "400px";
+      photo1.style.transition = '0.7s';
+    }, 1000);
+
+    setTimeout(() => {
+      photo2.style.width = "400px";
+      photo2.style.height = "400px";
+      photo2.style.transition = '0.7s';
+    }, 1500);
+
+    setTimeout(() => {
+      photo1.style.width = "300px";
+      photo1.style.height = "300px";
+      photo1.style.transition = '0.7s';
+    }, 2000);
+
+    setTimeout(() => {
+      photo2.style.width = "300px";
+      photo2.style.height = "300px";
+      photo2.style.transition = '0.7s';
+    }, 2500);
   });
 
   wedding.addEventListener("click", function () {
-    scrollTo({
-      top: "2600",
-      behavior: "smooth"
+    const text4Box = document.getElementById('text4Box');
+    text4Box.scrollIntoView({
+      behavior: 'smooth'
     });
   });
   undefined.addEventListener("click", function () {
     scrollTo({
-      top: "3500",
+      top: 3500,
       behavior: "smooth"
     });
   });
@@ -92,7 +121,6 @@ export const registerEventHandlers = () => {
       wed1.style.width = "400px";
       wed1.style.height = "600px";
       wed1.style.transition = "0.5s";
-
     });
   });
 
