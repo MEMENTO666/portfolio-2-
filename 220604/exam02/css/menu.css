@@ -8,11 +8,11 @@
   cursor: pointer;
 }
 
-#menu-ul>li:hover {
+/* #menu-ul>li:hover {
   color: #F13582;
   transition: 0.9s;
   font-size: 20px;
-}
+} */
 
 li {
   margin: 35px;

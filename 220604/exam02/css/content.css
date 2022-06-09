@@ -175,6 +175,12 @@
   font-family: 'East Sea Dokdo', cursive;
 }
 
+#text5 {
+  width:100vw;
+  height:100vw;
+  border:1px solid white;
+}
+
 #wed1 {
   /* background-image: url(./웨딩.jpg); */
   background-size: cover;
@@ -185,6 +191,15 @@
   /* background-image: url(./웨딩2.jpg); */
   background-size: cover;
 }
+
+#footer {
+  width:100vw;
+  height:10vh;
+  background-color: red;
+  position: relative;
+  bottom:0;
+}
+
 
 #sideBtn {
   width: 40px;

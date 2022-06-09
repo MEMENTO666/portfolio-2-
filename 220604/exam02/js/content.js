@@ -58,10 +58,15 @@ export const createContent = () => {
         <p>2018.11.10♥</p>
       </div>
     </div>
+    <div id="text5"></div>
+    <div id="footer"></div>
+
     </div>
   `;
 }
 
+
+////////////////////////////////////////////////////////
 const getUrlImagePath = (filename) => {
   const imageTopPath = './assets';
   return `url(${imageTopPath}/${filename})`;
@@ -87,9 +92,14 @@ export const loadImages = () => {
   keyList.forEach(key => {
     document.getElementById(key).style.backgroundImage = getUrlImagePath(imgList[key]);
   });
+
   
+  const text3 = document.getElementById("text3");
+  
+ 
+}
+ 
   //  document.getElementById('photo1').style.backgroundImage = getUrlImagePath('메인.jpg');
   //  document.getElementById('photo2').style.backgroundImage = getUrlImagePath('메인4.jpg');
   //  document.getElementById('photo3').style.backgroundImage = getUrlImagePath('메인6.jpg');
   //  document.getElementById('photo4').style.backgroundImage = getUrlImagePath('메인2.jpg');
-}

@@ -1,4 +1,5 @@
 export const registerEventHandlers = () => {
+  
   const home = document.getElementById("home");
   const about = document.getElementById("about");
   const photo = document.getElementById("photo");
@@ -9,7 +10,8 @@ export const registerEventHandlers = () => {
   const wed1 = document.getElementById("wed1");
   const wed2 = document.getElementById("wed2");
   const wedding = document.getElementById("wedding");
-  const menuList = document.getElementById("menu-ul");
+  const undefined = document.getElementById("undefined");
+  const text3Box = document.getElementById("text3Box");
 
   home.addEventListener("click", function () {
     scrollTo({
@@ -34,10 +36,17 @@ export const registerEventHandlers = () => {
 
   wedding.addEventListener("click", function () {
     scrollTo({
-      top: "2800",
+      top: "2600",
       behavior: "smooth"
     });
   });
+  undefined.addEventListener("click", function () {
+    scrollTo({
+      top: "3500",
+      behavior: "smooth"
+    });
+  });
+
 
   intro.addEventListener("mouseover", function (event) {
     console.log(intro);
@@ -77,12 +86,13 @@ export const registerEventHandlers = () => {
   wed1.addEventListener("mouseover", function (event) {
     wed1.style.width = "450px";
     wed1.style.height = "650px";
-    wed1.style.transition = "0.7s";
+    wed1.style.transition = "0.5s";
 
     wed1.addEventListener("mouseout", function (event) {
       wed1.style.width = "400px";
       wed1.style.height = "600px";
       wed1.style.transition = "0.5s";
+
     });
   });
 
@@ -99,4 +109,4 @@ export const registerEventHandlers = () => {
   });
 
 
-}
+};
