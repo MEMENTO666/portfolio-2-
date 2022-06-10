@@ -17,6 +17,21 @@ export const registerEventHandlers = () => {
   const photo3 = document.getElementById("photo3");
   const photo4 = document.getElementById("photo4");
 
+
+  //***************************************************************
+  // 아래쪽에 H
+  const profileImg = document.getElementById('profileImg');
+
+  profileImg.addEventListener('mouseover', () => {
+    HS.style.transform = 'rotateY(180deg)';
+  });
+
+  profileImg.addEventListener('mouseleave', () => {
+    HS.style.transform = 'rotateY(0deg)';
+  });
+  //****************************************************************
+  
+
   home.addEventListener("click", function () {
     window.scrollTo({
       left: 0,
@@ -31,7 +46,6 @@ export const registerEventHandlers = () => {
     text2.scrollIntoView({
       behavior: 'smooth'
     });
-    const photo1 = document.getElementById('photo1');
   });
 
   photo.addEventListener("click", function () {
@@ -120,6 +134,9 @@ export const registerEventHandlers = () => {
     });
   });
 
+  
+  // 위 동작과 겹쳐서 제거함
+  /*
   HS.addEventListener("mouseover", function (event) {
     HS.style.width = "350px";
     HS.style.height = "350px";
@@ -131,6 +148,7 @@ export const registerEventHandlers = () => {
       HS.style.transition = "0.5s";
     });
   });
+  */
 
   frogImg.addEventListener("mouseover", function (event) {
     frogImg.style.width = "380px";
