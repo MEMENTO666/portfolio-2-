@@ -19,16 +19,16 @@ export const registerEventHandlers = () => {
 
 
   //***************************************************************
-  // 아래쪽에 H
-  const profileImg = document.getElementById('profileImg');
+  
+  // const profileImg = document.getElementById('profileImg');
 
-  profileImg.addEventListener('mouseover', () => {
-    HS.style.transform = 'rotateY(180deg)';
-  });
+  // profileImg.addEventListener('mouseover', () => {
+    // HS.style.transform = 'rotateY(180deg)';
+  // });
 
-  profileImg.addEventListener('mouseleave', () => {
-    HS.style.transform = 'rotateY(0deg)';
-  });
+  // profileImg.addEventListener('mouseleave', () => {
+  //   HS.style.transform = 'rotateY(0deg)';
+  // });
   //****************************************************************
   
 
@@ -110,6 +110,26 @@ export const registerEventHandlers = () => {
     text4Box.scrollIntoView({
       behavior: "smooth"
     });
+    setTimeout(()=> {
+      wed1.style.transform = `rotateY(180deg)`
+      wed1.style.transition= "3s";
+    },1000);
+    setTimeout(()=> {
+      wed1.style.transform = `rotateX(0deg)`
+      wed1.style.transition= "3s";
+
+    },3000);
+
+    setTimeout(()=> {
+      wed2.style.transform = `rotateY(180deg)`
+      wed2.style.transition= "3s";
+    },1000);
+    setTimeout(()=> {
+      wed2.style.transform = `rotateY(0deg)`
+      wed2.style.transition= "3s";
+
+    },3000);
+    
   });
   undefined.addEventListener("click", function () {
     const text5 = document.getElementById("text5");
@@ -134,9 +154,8 @@ export const registerEventHandlers = () => {
     });
   });
 
+ 
   
-  // 위 동작과 겹쳐서 제거함
-  /*
   HS.addEventListener("mouseover", function (event) {
     HS.style.width = "350px";
     HS.style.height = "350px";
@@ -148,7 +167,7 @@ export const registerEventHandlers = () => {
       HS.style.transition = "0.5s";
     });
   });
-  */
+  
 
   frogImg.addEventListener("mouseover", function (event) {
     frogImg.style.width = "380px";
