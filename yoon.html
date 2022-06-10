@@ -236,8 +236,9 @@
       background-image: url(./메인2.jpg);
       background-size: cover;
     }
-              /* ****************************이미지 4개******************************** */
-            /***********************자식요소로 만들어서 한번에 효과주기*********** */
+
+    /* ****************************이미지 4개******************************** */
+    /***********************자식요소로 만들어서 한번에 효과주기*********** */
     #text4Box {
       width: 100vw;
       height: 100vh;
@@ -259,7 +260,7 @@
     #text4Box div:nth-child(1) div {
       width: 400px;
       height: 600px;
-      background-color: #F13582;
+      background-color: orange;
     }
 
 
@@ -280,17 +281,48 @@
       background-image: url(./웨딩.jpg);
       background-size: cover;
       background-position: center;
+      /* ///////////////////////// */
+      perspective: 300px;
+
+    }
+
+    #wed1 div {
+      backface-visibility: hidden;
+      transition: 1.8s;
+
+    }
+
+  
+    #front {
+      position: absolute;
+      transform: (0deg);
+      background-image: url(./cat.png);
+    }
+
+    #front:hover {
+      transform: rotateY(180deg);
+    }
+
+    #back {
+      transform: rotateY(180deg);
+      background-image: url(./dog.png);
+    }
+
+    #back:hover {
+      transform: rotateY(0deg);
     }
 
     #wed2 {
       background-image: url(./웨딩2.jpg);
       background-size: cover;
     }
+
     #footer {
-      width:100vw;
-      height:10vh;
+      width: 100vw;
+      height: 10vh;
       background-color: red;
     }
+
     /* ***********************좌, 우측에서 이미지 나오는 효과*************************** */
   </style>
 </head>
@@ -355,7 +387,10 @@
     </div>
     <div id="text4Box">
       <div>
-        <div id="wed1"></div>
+        <div id="wed1">
+          <div id="front">앞면</div>
+          <div id="back">뒷면</div>
+        </div>
         <div id="wed2"></div>
       </div>
       <div id="text4BoxText">
@@ -439,29 +474,29 @@
         frogImg.style.transition = "0.5s";
       });
     });
-    wed1.addEventListener("mouseover", function (event) {
-      wed1.style.width = "450px";
-      wed1.style.height = "650px";
-      wed1.style.transition = "0.7s";
+    // wed1.addEventListener("mouseover", function (event) {
+    //   wed1.style.width = "450px";
+    //   wed1.style.height = "650px";
+    //   wed1.style.transition = "0.7s";
 
-      wed1.addEventListener("mouseout", function (event) {
-        wed1.style.width = "400px";
-        wed1.style.height = "600px";
-        wed1.style.transition = "0.5s";
-      });
-    });
+    //   wed1.addEventListener("mouseout", function (event) {
+    //     wed1.style.width = "400px";
+    //     wed1.style.height = "600px";
+    //     wed1.style.transition = "0.5s";
+    //   });
+    // });
 
-    wed2.addEventListener("mouseover", function (event) {
-      wed2.style.width = "450px";
-      wed2.style.height = "650px";
-      wed2.style.transition = "0.7s";
+    // wed2.addEventListener("mouseover", function (event) {
+    //   wed2.style.width = "450px";
+    //   wed2.style.height = "650px";
+    //   wed2.style.transition = "0.7s";
 
-      wed2.addEventListener("mouseout", function (event) {
-        wed2.style.width = "400px";
-        wed2.style.height = "600px";
-        wed2.style.transition = "0.5s";
-      });
-    });
+    //   wed2.addEventListener("mouseout", function (event) {
+    //     wed2.style.width = "400px";
+    //     wed2.style.height = "600px";
+    //     wed2.style.transition = "0.5s";
+    //   });
+    // });
   </script>
 
 </body>
