@@ -12,8 +12,10 @@ export const registerEventHandlers = () => {
   const wedding = document.getElementById("wedding");
   const undefined = document.getElementById("undefined");
   const text3Box = document.getElementById("text3Box");
-  const photo1 = document.getElementById('photo1');
-  const photo2 = document.getElementById('photo2');
+  const photo1 = document.getElementById("photo1");
+  const photo2 = document.getElementById("photo2");
+  const photo3 = document.getElementById("photo3");
+  const photo4 = document.getElementById("photo4");
 
   home.addEventListener("click", function () {
     window.scrollTo({
@@ -39,41 +41,71 @@ export const registerEventHandlers = () => {
     });
     console.log(photo1.getBoundingClientRect());
     setTimeout(() => {
-      photo1.style.width = "400px";
-      photo1.style.height = "400px";
-      photo1.style.transition = '0.7s';
+      photo1.style.width = "350px";
+      photo1.style.height = "350px";
+      photo1.style.transition = "0.7s";
     }, 1000);
 
     setTimeout(() => {
-      photo2.style.width = "400px";
-      photo2.style.height = "400px";
-      photo2.style.transition = '0.7s';
+      photo2.style.width = "350px";
+      photo2.style.height = "350px";
+      photo2.style.transition = "0.7s";
     }, 1500);
 
     setTimeout(() => {
       photo1.style.width = "300px";
       photo1.style.height = "300px";
-      photo1.style.transition = '0.7s';
+      photo1.style.transition = "0.7s";
     }, 2000);
 
     setTimeout(() => {
       photo2.style.width = "300px";
       photo2.style.height = "300px";
-      photo2.style.transition = '0.7s';
+      photo2.style.transition = "0.7s";
     }, 2500);
+
+    setTimeout(() => {
+      photo3.style.width = "350px";
+      photo3.style.height = "350px";
+      photo3.style.transition = "0.7s";
+    }, 3000);
+
+    setTimeout(() => {
+      photo4.style.width = "350px";
+      photo4.style.height = "350px";
+      photo4.style.transition = "0.7s";
+    }, 3500);
+
+    setTimeout(() => {
+      photo3.style.width = "300px";
+      photo3.style.height = "300px";
+      photo3.style.transition = "0.7s";
+    }, 4000);
+
+    setTimeout(() => {
+      photo4.style.width = "300px";
+      photo4.style.height = "300px";
+      photo4.style.transition = "0.7s";
+    }, 4500);
   });
+      //! 너무 긴디?
+
 
   wedding.addEventListener("click", function () {
-    const text4Box = document.getElementById('text4Box');
+    const text4Box = document.getElementById("text4Box");
     text4Box.scrollIntoView({
-      behavior: 'smooth'
+      behavior: "smooth"
     });
   });
   undefined.addEventListener("click", function () {
-    scrollTo({
-      top: 3500,
+    const text5 = document.getElementById("text5");
+    text5.scrollIntoView({
       behavior: "smooth"
+      
     });
+    console.log("##########ddddf")
+    console.log(photo1.getBoundingClientRect());
+
   });
 
 
