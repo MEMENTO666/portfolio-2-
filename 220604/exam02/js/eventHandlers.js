@@ -36,7 +36,7 @@ export const registerEventHandlers = () => {
     window.scrollTo({
       left: 0,
       top: 0,
-      behavior: "smooth",
+      behavior: "smooth", block : "end"
     });
   });
 
@@ -44,14 +44,14 @@ export const registerEventHandlers = () => {
     const text2 = document.getElementById('text2');
     //text2.focus();
     text2.scrollIntoView({
-      behavior: 'smooth'
+      behavior: 'smooth', block : "end"
     });
   });
 
   photo.addEventListener("click", function () {
     const text3 = document.getElementById('text3');
     text3.scrollIntoView({
-      behavior: 'smooth'
+      behavior: 'smooth',block : "end"
     });
     console.log(photo1.getBoundingClientRect());
     setTimeout(() => {
@@ -104,12 +104,13 @@ export const registerEventHandlers = () => {
   });
       //! 너무 긴디?
 
-
-  wedding.addEventListener("click", function () {
+    wedding.addEventListener("click", function () {
     const text4Box = document.getElementById("text4Box");
-    text4Box.scrollIntoView({
-      behavior: "smooth"
-    });
+     text4Box.scrollIntoView({
+      behavior : "smooth", block : "end"
+     });
+    
+    
     setTimeout(()=> {
       wed1.style.transform = `rotateY(180deg)`
       wed1.style.transition= "3s";
@@ -134,7 +135,7 @@ export const registerEventHandlers = () => {
   undefined.addEventListener("click", function () {
     const text5 = document.getElementById("text5");
     text5.scrollIntoView({
-      behavior: "smooth"
+      behavior: "smooth",block : "end"
       
     });
     console.log("##########ddddf")
@@ -157,13 +158,13 @@ export const registerEventHandlers = () => {
  
   
   HS.addEventListener("mouseover", function (event) {
-    HS.style.width = "350px";
-    HS.style.height = "350px";
+    HS.style.width = "380px";
+    HS.style.height = "380px";
     HS.style.transition = "0.7s";
 
     HS.addEventListener("mouseout", function (event) {
-      HS.style.width = "320px";
-      HS.style.height = "320px";
+      HS.style.width = "350px";
+      HS.style.height = "350px";
       HS.style.transition = "0.5s";
     });
   });

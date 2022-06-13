@@ -69,13 +69,14 @@
   justify-content: center;
   width: 40vw;
   perspective: 300px;
+  /* border: 1px solid white; */
 }
 
 #profileImg div {
   /* background-image: url(./메인3.jpg); */
   background-size: cover;
-  width: 320px;
-  height: 320px;
+  width: 350px;
+  height: 350px;
   transition: 1s;
 }
 
