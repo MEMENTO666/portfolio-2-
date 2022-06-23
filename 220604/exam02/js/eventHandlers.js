@@ -54,6 +54,7 @@ export const registerEventHandlers = () => {
       behavior: 'smooth',block : "end"
     });
     console.log(photo1.getBoundingClientRect());
+    
     setTimeout(() => {
       photo1.style.width = "350px";
       photo1.style.height = "350px";
